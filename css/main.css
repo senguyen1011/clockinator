@@ -1,0 +1,123 @@
+/* DM Sans */
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:400,400i,500,500i,700&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  min-width: 420px;
+  margin-left: 25%;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+
+}
+
+.container > form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.groupInput {
+  display: block;
+  padding: 0.2rem 0;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.groupInput:invalid {
+  box-shadow: none;
+}
+
+.groupLabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0.2rem 0;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.groupInput:focus + .groupLabel, .labelMini {
+  font-size: 80%;
+  font-weight: 700;
+  transform: translate3d(0, -100%, 0);
+}
+
+.suggest {
+  visibility: hidden;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.clockTable {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+}
+
+.clockTable th {
+  padding: 0.2rem 0;
+  text-align: left;
+  border-bottom: 2px solid black;
+}
+
+.clockTable > tbody > tr {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.clockTable > tbody > tr:hover {
+  background-color: black;
+  color: white;
+}
+
+.clockTable td {
+  padding: 0.2rem 0;
+  border-bottom: 2px solid black;
+}
+
+
+@media screen and (max-width: 1280px) {
+    .row {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .inputGroup, .groupInput {
+        width: 100%;
+    }
+
+    .inputGroup {
+        margin: 1rem 0;
+    }
+}
